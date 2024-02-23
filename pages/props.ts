@@ -13,7 +13,7 @@ const COMMUNITY = [
 const SWPRO = [
     { title: "Download", link: "https://github.com/Sketchware-pro/Sketchware-Pro/releases" },
     { title: "Blog", link: "/blog" },
-    { title: "Documentation", link: "/docs" },
+    { title: "Documentation", link: "https://sketchware-pro.vercel.app/docs" },
 ];
 
 const MORE = [

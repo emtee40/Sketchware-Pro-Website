@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
         });
     }
 
-    const props: BlogPost[] = await $fetch("/api/blogs");
+    const props: BlogPost[] = await $fetch("/api/docs");
 
     const property = props.find((p) => p.id == id);
 

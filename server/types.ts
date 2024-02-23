@@ -5,4 +5,3 @@ export interface BlogPost {
     description: string;
     id: string;
 }
-

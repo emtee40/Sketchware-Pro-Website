@@ -35,7 +35,7 @@
 
 
     <div class="text-center">
-      <p class="text-xl text-gray-500 py-4">© 2024-2025 Sketchware Pro</p>
+      <p class="text-md md:text-xl text-gray-500 py-4">© 2024-2025 Sketchware Pro</p>
     </div>
   </footer>
 </template>

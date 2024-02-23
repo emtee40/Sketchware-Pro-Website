@@ -9,6 +9,12 @@ declare module 'nitropack' {
     '/api/blogs': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/blogs').default>>>>
     }
+    '/api/doc': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/doc').default>>>>
+    }
+    '/api/docs': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/docs').default>>>>
+    }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
     }

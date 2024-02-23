@@ -672,11 +672,15 @@ const errorHandler = (async function errorhandler(error, event) {
 
 const _lazy_1Kpwjx = () => Promise.resolve().then(function () { return blog$1; });
 const _lazy_oJiRJe = () => Promise.resolve().then(function () { return blogs$1; });
+const _lazy_HKFe4K = () => Promise.resolve().then(function () { return doc$1; });
+const _lazy_Waiw3K = () => Promise.resolve().then(function () { return docs$1; });
 const _lazy_6tzmet = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/api/blog', handler: _lazy_1Kpwjx, lazy: true, middleware: false, method: undefined },
   { route: '/api/blogs', handler: _lazy_oJiRJe, lazy: true, middleware: false, method: undefined },
+  { route: '/api/doc', handler: _lazy_HKFe4K, lazy: true, middleware: false, method: undefined },
+  { route: '/api/docs', handler: _lazy_Waiw3K, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_6tzmet, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_6tzmet, lazy: true, middleware: false, method: undefined }
 ];
@@ -905,6 +909,51 @@ const blogs = defineEventHandler((event) => {
 const blogs$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   default: blogs
+});
+
+const doc = defineEventHandler(async (event) => {
+  const { id } = getQuery$1(event);
+  if (!id) {
+    return new Response("Property ID is required", {
+      status: 400
+    });
+  }
+  const props = await $fetch("/api/docs");
+  const property = props.find((p) => p.id == id);
+  return new Response(JSON.stringify(property), {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    status: 200
+  });
+});
+
+const doc$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: doc
+});
+
+const docs = defineEventHandler((event) => {
+  const blogs = [
+    {
+      id: "story_of_sketchware",
+      title: "From Dream to Code: The Story of Sketchware",
+      content: "The story of how a high school student built a no-code app builder that has been used by millions of people around the world.",
+      author: "Pranav Purwar",
+      date: "January 1, 2024"
+    }
+  ];
+  const response = new Response(JSON.stringify(blogs), {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+  event.respondWith(response);
+});
+
+const docs$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: docs
 });
 
 const Vue3 = version.startsWith("3");
