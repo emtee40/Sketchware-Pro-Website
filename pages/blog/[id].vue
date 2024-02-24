@@ -10,7 +10,7 @@
         <p class="font-medium text-medium md:text-lg text-gray-600">{{ post.date }}</p>
       </div>
 
-      <div class="flex flex-col gap-8 rounded-3xl px-6 md:px-12" id="content">
+      <div class="flex flex-col gap-6 rounded-3xl px-6 md:px-12 text-gray-400" id="content">
         
       </div>
     </div>
@@ -35,19 +35,25 @@ const post: BlogPost = await $fetch("/api/blog?id=" + id)
 
 marked.use(
   {
-    gfm: true,
     renderer: {
-      heading(text: string, level: number, raw: string) {
-        return `<h1 class="text-lg md:text-3xl text-gray-300 font-semibold">${raw}</h>`
-      },
-    
-      strong(text: string) {
-        return `<span class="text-lg font-bold md:text-2xl text-gray-300">${text}</span>`
-      },
-      text(text: string) {
-        return `<p class="text-lg mt-2 font-light md:text-2xl text-gray-400">${text}</p>`
-      },
-    }
+      link: (href: string, title: string | null | undefined, text: string) => {
+
+			return `<a class="text-blue-200 underline" href="${href}" target="_blank" rel="noopener noreferrer">${ title? title : text }</a>`
+		},
+		strong: (text: string) => {
+			return `<span class="font-medium text-gray-300 text-lg md:text-xl">${text}</span>`
+		},
+        
+		heading(text: string, level: number, raw: string) {
+			return `<h1 class="text-3xl md:text-${ 4 - level }xl font-bold text-gray-300 mb-2 mt-4">${raw}</h1>`
+		},
+    paragraph(text: string) {
+      return `<p class="text-xl md:text-2xl py-1 font-light text-gray-400">${text}</p>`
+    },
+    text(text: string) {
+      return `<span class="text-xl md:text-2xl">${text}</span>`
+    },
+  }
   }
 )
 
