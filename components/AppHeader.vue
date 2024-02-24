@@ -4,8 +4,9 @@
     <div class="flex items-center justify-between gap-4">
 		<div class="flex items-center gap-4">
       <img class="h-12 md:h-16 md:w-16" src="https://raw.githubusercontent.com/Sketchware-Pro/Sketchware-Pro/main/assets/Sketchware-Pro.png" alt="Logo" />
-      <p class="text-xl md:text-4xl font-medium no-underline hover:underline font-sans text-gray-300">Sketchware</p>
-      <p class="text-lg md:text-4xl font-light no-underline hover:underline font-sans text-gray-400">Pro</p>
+      <a href="/" class="text-xl md:text-4xl font-medium no-underline hover:underline font-sans text-gray-300">Sketchware
+      <span class="text-lg md:text-4xl font-light no-underline font-sans text-gray-400">Pro</span>
+	  </a>
 	</div>
     <nav class="hidden md:flex gap-6 justify-between items-end text-gray-300">
         <a

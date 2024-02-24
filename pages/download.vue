@@ -17,21 +17,21 @@
 </div>
             <div class="flex flex-col items-center justify-center gap-12">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <a class="rounded-3xl p-6 border border-gray-600 md:border-0 md:bg-gradient-to-r from-[#232b4c] to-[#121521]" href="https://www.mediafire.com/file/989up6hj5i89kak/Sketchware_Pro_6.3.0_fix1.apk/file">
-                    <h1 class="text-3xl md:text-5xl font-semibold text-white pb-4">Release Build</h1>
+                <a class="rounded-3xl p-8 border border-gray-600 md:border-0 md:bg-gradient-to-r from-[#232b4c] to-[#121521]" href="https://www.mediafire.com/file/989up6hj5i89kak/Sketchware_Pro_6.3.0_fix1.apk/file">
+                    <h1 class="text-3xl md:text-4xl font-semibold text-white pb-4">Release Build</h1>
                     <p class="text-white font-light text-lg md:text-xl p-2">
                         Download the latest release of the application. This is the most stable version of the application.
                     </p>
                 </a>
-                <a class="rounded-3xl p-6 border border-gray-600 md:border-0 md:bg-gradient-to-l from-[#232b4c] to-[#00020c]" href="https://github.com/Sketchware-Pro/Sketchware-Pro/releases/tag/v6.4.0-rc05">
-                    <h1 class="text-3xl md:text-5xl font-semibold text-white pb-4">Test Build</h1>
+                <a class="rounded-3xl p-8 border border-gray-600 md:border-0 md:bg-gradient-to-l from-[#232b4c] to-[#12193d]" href="https://github.com/Sketchware-Pro/Sketchware-Pro/releases/tag/v6.4.0-rc05">
+                    <h1 class="text-3xl md:text-4xl font-semibold text-white pb-4">Test Build</h1>
                     <p class="text-white font-light text-xl p-2">
                         Download the latest test build of the application. This version may contain bugs and is not recommended for production use.
                     </p>
                 </a>
             </div>
-            <a class="rounded-3xl p-6 md:p-16 border border-gray-600 md:border-0 md:bg-gradient-to-t from-[#232b4c] to-[#000000]" href=" https://nightly.link/Sketchware-Pro/Sketchware-Pro/workflows/android/main?status=completed">
-                <h1 class="text-3xl md:text-5xl font-semibold text-white pb-4">Nightly Build</h1>
+            <a class="rounded-3xl p-6 md:p-12 border border-gray-600 md:border-0 md:bg-gradient-to-t from-[#232b4c] to-[#1c123a]" href=" https://nightly.link/Sketchware-Pro/Sketchware-Pro/workflows/android/main?status=completed">
+                <h1 class="text-3xl md:text-4xl font-semibold text-white pb-4">Nightly Build</h1>
                 <p class="text-white font-light text-xl p-2">
                     Download the latest nightly build of the application. This version is built for every commit and is highly unstable.
                 </p>
